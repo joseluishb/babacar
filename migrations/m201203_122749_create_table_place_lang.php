@@ -38,7 +38,7 @@ class m201203_122749_create_table_place_lang extends Migration
         ]);
 
         $this->createIndex('idx_place_lang_place_id_place','place_lang','place_id');
-        $this->addForeignKey('fk_place_lang_place_id_place','place_lang', 'place_id', 'place','id');
+        $this->addForeignKey('fk_place_lang_place_id_place','place_lang', 'place_id', 'place','id','restrict','cascade');
     }
 
     public function down()
