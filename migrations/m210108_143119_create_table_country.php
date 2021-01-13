@@ -14,7 +14,7 @@ class m210108_143119_create_table_country extends Migration
     {
         $this->createTable('country', [
             'id' => $this->primaryKey()->unsigned(),
-            'code' => $this->string(2)->unsigned(),
+            'code' => $this->string(2)->unique()->notNull(),
             'name' => $this->string(80),
             'phonecode' => $this->integer(5),
             'lat' => $this->string(45)->notNull(),

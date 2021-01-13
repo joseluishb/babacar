@@ -23,7 +23,7 @@ class m210109_143444_create_table_trip extends Migration
             'currency_id' => $this->integer()->unsigned()->notNull(),
             'status' => $this->integer(4)->notNull()->defaultValue(1),
             'created' => $this->timestamp()->notNull()->defaultExpression('CURRENT_TIMESTAMP'),
-            'updated' => $this->timestamp()->notNull()
+            'updated' => $this->timestamp()->notNull()->defaultExpression('CURRENT_TIMESTAMP'),
         ]);
         
         $this->createIndex('idx_trip_user_id_user', 'trip', 'user_id');
